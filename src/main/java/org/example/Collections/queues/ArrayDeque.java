@@ -3,10 +3,15 @@ package org.example.Collections.queues;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class StackWithLinkedList {
-
+public class ArrayDeque {
     public static void main(String[] args) {
-        Deque<String> editHistory = new LinkedList<>();
+
+        //use this when you dont store a null values otherwise,
+        //use linkedlist
+        Deque<String> editHistory = new java.util.ArrayDeque<>();
+        System.out.println("Taking action: null");
+        editHistory.push(null);
+
         System.out.println("Taking action: making the text bold");
         editHistory.push("making the text bold");
 
@@ -25,7 +30,5 @@ public class StackWithLinkedList {
         System.out.println("Taking action: making the text italic");
         editHistory.push("making the text italic");
         System.out.println("Edit History: " + editHistory);
-
     }
-
 }
